@@ -6,4 +6,4 @@ PRED_DATA='/data/input/pred'
 PRED_OUT='/data/output/pred'
 MODEL_FILE='/tmp/model.bin'
 
-/code/model.py predict_all ${MODEL_FILE} ${PRED_DATA} ${PRED_OUT}
+/code/model.py predict-all ${MODEL_FILE} ${PRED_DATA} ${PRED_OUT}
