@@ -18,13 +18,13 @@ create `/data` directory and sub-directory below:
 └── output
      └── pred
 ```
-You put data on your local machine. Data for train into /data/input/train, data for prediction into /data/input/train and ground truth for training into /data/.
+You put data on your local machine. Data for train into /data/input/train, data for prediction into /data/input/pred and ground truth for training into /data/gt/train.
 If you want to put the data other than above directories, update the path in train.sh and pred.sh.
 
 
 Download this sample code then build with docker build command.
 ```
-docker build {IMAGE_NAME}:{TAG} .
+docker build -t {IMAGE_NAME}:{TAG} .
 ```
 
 ## Usage
