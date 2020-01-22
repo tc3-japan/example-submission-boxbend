@@ -31,13 +31,13 @@ docker build -t {IMAGE_NAME}:{TAG} .
 ### train.sh and pred.sh
 First run train.sh with the following options:
 ```
-docker run --rm -v /data:/data -v /tmp:/tmp {IMAGE_NAME}:{TAG} /code/train.sh
+docker run --rm -v /data/input/train:/data/input/train -v /data/gt/train:/data/gt/train -v /tmp:/tmp {IMAGE_NAME}:{TAG} /code/train.sh
 ```
 All train files and ground truth for train are read with this command. then model will be created in `/tmp` directory.
 
 Next run pred.sh with the following options:
 ```
-docker run --rm -v /data:/data -v /tmp:/tmp {IMAGE_NAME}:{TAG} /code/pred.sh
+docker run --rm -v /data/input/pred:/data/input/pred -v /data/output/pred:/data/output/pred -v /tmp:/tmp {IMAGE_NAME}:{TAG} /code/pred.sh
 ```
 Prediction files will be created into /data/output/pred
 
