@@ -11,4 +11,4 @@ ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 RUN pip install pandas click joblib sklearn
 RUN cd /usr/bin && ln -s python3.6 python && cd ~
-COPY ./code/* /code/
+COPY ./* /code/
